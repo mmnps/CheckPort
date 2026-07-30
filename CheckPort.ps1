@@ -1,5 +1,4 @@
 #Requires -Version 4.0
-#Requires -Modules NetTCPIP
 <#
 .SYNOPSIS
     Checks if a Port is reachable on a specific client.
@@ -27,8 +26,9 @@
     .\CheckPort.ps1 -Target "192.168.1.10" -Port "80" -EnableLogging -LogPath "C:\Logs\CheckPort"
 
 .NOTES
-    Version:    1.1
+    Version:    1.2
     Author:     mmnps
+    Changes:    Bugfixes
 #>
 
 ######################
