@@ -52,12 +52,3 @@ Summary:
 Port Reachable: 42
 Port not reachable: 3
 ```
-
-## Known Limitations
-
-- Only the target's IP address is checked initially with a single ping before the loop starts; if the host goes fully offline afterwards, the script will only report the port as unreachable, not the host itself.
-- The log file is determined once at script start, based on the date at that time — if the script runs across midnight, all entries stay in the same file rather than rolling over to a new daily log.
-
-## License
-
-MIT
