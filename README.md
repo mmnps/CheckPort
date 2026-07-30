@@ -41,14 +41,5 @@ The script runs in an infinite loop, checking the port at the configured interva
 ```
 
 Checks port 443 on `10.0.0.5` every 30 seconds and logs status changes to `.\Logs\<date>.log`.
-
-## Output
-
-While running, the script prints the current status to the console (green for reachable, red for unreachable). On exit, it prints a summary:
-
-```
-----------------------------------
-Summary:
-Port Reachable: 42
-Port not reachable: 3
+not reachable: 3
 ```
