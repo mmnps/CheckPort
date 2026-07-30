@@ -1,4 +1,3 @@
-#Requires -Version 4.0
 <#
 .SYNOPSIS
     Checks if a Port is reachable on a specific client.
@@ -26,9 +25,10 @@
     .\CheckPort.ps1 -Target "192.168.1.10" -Port "80" -EnableLogging -LogPath "C:\Logs\CheckPort"
 
 .NOTES
-    Version:    1.2
-    Author:     mmnps
-    Changes:    Bugfixes
+    Version:        1.4
+    Requirements:   PowerShell 4.0 or later, NetTCPIP module
+    Author:         mmnps
+    Changes:        Bugfixes
 #>
 
 ######################
@@ -36,7 +36,7 @@
 ######################
 param(
     [Parameter(Mandatory)][ValidateScript({ [System.Net.IPAddress]::TryParse($_, [ref]$null) })][string]$Target,   #Check if ip is valid
-    [Parameter(Mandatory)][ValidateRange(1, 65535)][int]$Port,   #Check if port is valid
+    [Parameter(Mandatory)][ValidateRange(1, 65535)][int]$Port,
     [switch]$EnableLogging,
     [int]$CheckInterval = 60,
     [string]$LogPath = "$PSScriptRoot\Logs"
@@ -140,4 +140,3 @@ finally {
     Write-Host "Port not reachable: " -NoNewline
     Write-Host $PortNotReachable -ForegroundColor Red 
 }
-
