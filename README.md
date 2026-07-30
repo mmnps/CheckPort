@@ -42,4 +42,4 @@ The script runs in an infinite loop, checking the port at the configured interva
 
 Checks port 443 on `10.0.0.5` every 30 seconds and logs status changes to `.\Logs\<date>.log`.
 not reachable: 3
-```
+
