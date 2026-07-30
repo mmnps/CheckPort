@@ -36,7 +36,7 @@
 ######################
 param(
     [Parameter(Mandatory)][ValidateScript({ [System.Net.IPAddress]::TryParse($_, [ref]$null) })][string]$Target,   #Check if ip is valid
-    [Parameter(Mandatory)][ValidateRange(1, 65535)][int]$Port,
+    [Parameter(Mandatory)][ValidateRange(1, 65535)][int]$Port,    #Check if port is valid
     [switch]$EnableLogging,
     [int]$CheckInterval = 60,
     [string]$LogPath = "$PSScriptRoot\Logs"
