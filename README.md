@@ -28,11 +28,11 @@ The script runs in an infinite loop, checking the port at the configured interva
 
 | Parameter | Required | Default | Description |
 |---|---|---|---|
-| `-Target` | Yes | — | The IP address to check. Must be a valid IPv4 address. |
-| `-Port` | Yes | — | The TCP port to check (1–65535). |
-| `-EnableLogging` | No | Off | Enables writing status changes to a log file. |
-| `-CheckInterval` | No | `60` | Seconds to wait between each check. |
-| `-LogPath` | No | `Logs` folder next to the script | Directory where the daily log file is stored. |
+| `-Target`  | Yes | — | The IP address to check. Must be a valid IPv4 address. |
+| `-Port`  | Yes | — | The TCP port to check (1–65535). |
+| `-EnableLogging`  | No | Off | Enables writing status changes to a log file. |
+| `-CheckInterval`  | No | `60` | Seconds to wait between each check. |
+| `-LogPath`  | No | `Logs` folder next to the script | Directory where the daily log file is stored. |
 
 ## Example
 
