@@ -25,7 +25,7 @@
     .\CheckPort.ps1 -Target "192.168.1.10" -Port "80" -EnableLogging -LogPath "C:\Logs\CheckPort"
 
 .NOTES
-    Version:        1.4
+    Version:        1.5
     Requirements:   PowerShell 4.0 or later, NetTCPIP module
     Author:         mmnps
     Changes:        Bugfixes
@@ -36,7 +36,7 @@
 ######################
 param(
     [Parameter(Mandatory)][ValidateScript({ [System.Net.IPAddress]::TryParse($_, [ref]$null) })][string]$Target,   #Check if ip is valid
-    [Parameter(Mandatory)][ValidateRange(1, 65535)][int]$Port,    #Check if port is valid
+    [Parameter(Mandatory)][ValidateRange(1, 65535)][int]$Port,   #Check if port is valid
     [switch]$EnableLogging,
     [int]$CheckInterval = 60,
     [string]$LogPath = "$PSScriptRoot\Logs"
@@ -122,7 +122,7 @@ try {
                 Write-Log -Level INFO -Text "Port $Port is reachable again on $Target." -ToConsole
             }
             else {
-                Write-Host "Port $Port is reachable on $Target" -ForegroundColor Green  
+                Write-Host "[$(Get-Date -Format "yyyy-MM-dd HH:mm:ss")] - INFO - Port $Port is reachable on $Target" -ForegroundColor Green  
             }
             $PortReachable++
             $Offline = $False
@@ -140,3 +140,4 @@ finally {
     Write-Host "Port not reachable: " -NoNewline
     Write-Host $PortNotReachable -ForegroundColor Red 
 }
+
