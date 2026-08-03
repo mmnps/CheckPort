@@ -27,7 +27,7 @@
 .NOTES
     Version:        1.5
     Requirements:   PowerShell 4.0 or later, NetTCPIP module
-    Author:         mmnps
+    Author:         https://github.com/mmnps
     Changes:        Bugfixes
 #>
 
