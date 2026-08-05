@@ -56,7 +56,7 @@ $Global:WarningPreference = "SilentlyContinue"
 ###   Infos   ###
 #################
 Write-Host "# This script checks if a port is reachable on a client for over a longer period of time." -ForegroundColor DarkCyan
-if ($EnableLogging) { Write-Host "# Path to Logfile: $LogFile" -ForegroundColor DarkCyan } 
+if ($EnableLogging) { Write-Host "# Path to the logfile: $LogFile" -ForegroundColor DarkCyan } 
 Write-Host "# Last updated: $LastUpdated" -ForegroundColor DarkCyan
 
 
